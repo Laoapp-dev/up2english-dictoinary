@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+/* Tailwind v4 defaults `dark:` to the OS-level prefers-color-scheme media query.
+   This app toggles a `.dark` class on <html> instead (see App.tsx), so we opt into
+   class-based dark mode here — otherwise the Dark/Light switch has no visible effect
+   unless the OS theme happens to already match. */
+@custom-variant dark (&:where(.dark, .dark *));
+

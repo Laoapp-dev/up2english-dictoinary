@@ -1,0 +1,6 @@
+{
+  "name": "Up2Eng Dictionary",
+  "description": "Lightweight, fast online & offline dictionary app with PWA support, IndexedDB caching, and CSV/JSON dataset import/export.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
