@@ -57,8 +57,8 @@ export const SavedWordsModal: React.FC<SavedWordsModalProps> = ({
         {/* Header */}
         <div className="flex items-center justify-between pb-4 border-b border-slate-200 dark:border-slate-800 flex-shrink-0 gap-2">
           <div className="flex items-center gap-3">
-            <div className="p-2.5 rounded-lg bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400">
-              <Bookmark className="w-5 h-5 fill-indigo-600 dark:fill-indigo-400" />
+            <div className="p-2.5 rounded-lg bg-violet-50 dark:bg-violet-950/60 text-violet-600 dark:text-violet-400">
+              <Bookmark className="w-5 h-5 fill-violet-600 dark:fill-violet-400" />
             </div>
             <div>
               <h3 className="text-xl font-bold text-slate-900 dark:text-slate-100">
@@ -77,7 +77,7 @@ export const SavedWordsModal: React.FC<SavedWordsModalProps> = ({
                   onClose();
                   onOpenQuiz();
                 }}
-                className="px-3.5 py-1.5 bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold rounded-xl flex items-center gap-1.5 shadow-sm transition-all"
+                className="px-3.5 py-1.5 bg-violet-600 hover:bg-violet-700 text-white text-xs font-semibold rounded-xl flex items-center gap-1.5 shadow-sm transition-all"
               >
                 <Brain className="w-4 h-4" />
                 <span className="hidden sm:inline">Start Quiz</span>
@@ -100,7 +100,7 @@ export const SavedWordsModal: React.FC<SavedWordsModalProps> = ({
             value={filter}
             onChange={e => setFilter(e.target.value)}
             placeholder="Search saved vocabulary..."
-            className="w-full pl-10 pr-4 py-2 rounded-xl bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-slate-100 text-xs sm:text-sm border border-slate-200 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            className="w-full pl-10 pr-4 py-2 rounded-xl bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-slate-100 text-xs sm:text-sm border border-slate-200 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-violet-500"
           />
         </div>
 
@@ -120,17 +120,17 @@ export const SavedWordsModal: React.FC<SavedWordsModalProps> = ({
                   onSelectWord(item.word);
                   onClose();
                 }}
-                className="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60 hover:border-indigo-400 transition-all flex items-start justify-between gap-4 cursor-pointer group"
+                className="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60 hover:border-violet-400 transition-all flex items-start justify-between gap-4 cursor-pointer group"
               >
                 <div className="space-y-1">
                   <div className="flex items-center gap-2 flex-wrap">
-                    <span className="font-bold text-base text-slate-900 dark:text-slate-100 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 capitalize transition-colors">
+                    <span className="font-bold text-base text-slate-900 dark:text-slate-100 group-hover:text-violet-600 dark:group-hover:text-violet-400 capitalize transition-colors">
                       {item.word}
                     </span>
                     {item.phonetic && (
                       <span className="text-xs font-serif italic text-slate-500">{item.phonetic}</span>
                     )}
-                    <span className="text-[10px] px-2 py-0.5 rounded bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 font-bold lowercase">
+                    <span className="text-[10px] px-2 py-0.5 rounded bg-violet-50 dark:bg-violet-950 text-violet-600 dark:text-violet-400 font-bold lowercase">
                       {item.meanings[0]?.partOfSpeech || 'word'}
                     </span>
                   </div>
@@ -143,7 +143,7 @@ export const SavedWordsModal: React.FC<SavedWordsModalProps> = ({
                 <button
                   onClick={e => handleRemoveBookmark(item.word, e)}
                   title="Remove Bookmark"
-                  className="p-2 rounded-lg text-indigo-500 hover:text-rose-600 hover:bg-rose-50 dark:hover:bg-rose-950/60 transition-colors flex-shrink-0"
+                  className="p-2 rounded-lg text-violet-500 hover:text-rose-600 hover:bg-rose-50 dark:hover:bg-rose-950/60 transition-colors flex-shrink-0"
                 >
                   <Trash2 className="w-4.5 h-4.5" />
                 </button>

@@ -70,7 +70,7 @@ export const CustomWordsManager: React.FC<CustomWordsManagerProps> = ({
           {/* Header */}
           <div className="flex items-center justify-between pb-4 border-b border-zinc-100 dark:border-zinc-700 flex-shrink-0">
             <div className="flex items-center gap-3">
-              <div className="p-2.5 rounded-xl bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400">
+              <div className="p-2.5 rounded-xl bg-violet-50 dark:bg-violet-950/60 text-violet-600 dark:text-violet-400">
                 <FolderEdit className="w-5 h-5" />
               </div>
               <div>
@@ -89,7 +89,7 @@ export const CustomWordsManager: React.FC<CustomWordsManagerProps> = ({
                   setEditingEntry(null);
                   setIsAddModalOpen(true);
                 }}
-                className="px-3 py-1.5 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-xs rounded-xl flex items-center gap-1 shadow-sm transition-all"
+                className="px-3 py-1.5 bg-violet-600 hover:bg-violet-700 text-white font-semibold text-xs rounded-xl flex items-center gap-1 shadow-sm transition-all"
               >
                 <Plus className="w-4 h-4" /> Add Word
               </button>
@@ -110,7 +110,7 @@ export const CustomWordsManager: React.FC<CustomWordsManagerProps> = ({
               value={filter}
               onChange={e => setFilter(e.target.value)}
               placeholder="Filter custom words..."
-              className="w-full pl-10 pr-4 py-2 rounded-xl bg-zinc-50 dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 text-xs sm:text-sm border border-zinc-200 dark:border-zinc-700 focus:outline-none focus:ring-2 focus:ring-indigo-500/50"
+              className="w-full pl-10 pr-4 py-2 rounded-xl bg-zinc-50 dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 text-xs sm:text-sm border border-zinc-200 dark:border-zinc-700 focus:outline-none focus:ring-2 focus:ring-violet-500/50"
             />
           </div>
 
@@ -126,7 +126,7 @@ export const CustomWordsManager: React.FC<CustomWordsManagerProps> = ({
               filteredWords.map(item => (
                 <div
                   key={item.word}
-                  className="p-4 rounded-2xl bg-zinc-50/80 dark:bg-zinc-900/50 border border-zinc-200/80 dark:border-zinc-700/60 hover:border-indigo-300 dark:hover:border-indigo-700 transition-all flex items-start justify-between gap-4"
+                  className="p-4 rounded-2xl bg-zinc-50/80 dark:bg-zinc-900/50 border border-zinc-200/80 dark:border-zinc-700/60 hover:border-violet-300 dark:hover:border-violet-700 transition-all flex items-start justify-between gap-4"
                 >
                   <div className="space-y-1">
                     <div className="flex items-center gap-2 flex-wrap">
@@ -135,13 +135,13 @@ export const CustomWordsManager: React.FC<CustomWordsManagerProps> = ({
                           onSelectWord(item.word);
                           onClose();
                         }}
-                        className="font-bold text-base text-zinc-900 dark:text-zinc-100 hover:text-indigo-600 dark:hover:text-indigo-400 capitalize transition-colors text-left"
+                        className="font-bold text-base text-zinc-900 dark:text-zinc-100 hover:text-violet-600 dark:hover:text-violet-400 capitalize transition-colors text-left"
                       >
                         {item.word}
                       </button>
 
                       {item.phonetic && (
-                        <span className="text-xs font-mono text-indigo-500">{item.phonetic}</span>
+                        <span className="text-xs font-mono text-violet-500">{item.phonetic}</span>
                       )}
 
                       <span className="text-[10px] px-2 py-0.5 rounded-full bg-purple-100 dark:bg-purple-950/80 text-purple-700 dark:text-purple-300 font-semibold uppercase">
@@ -167,7 +167,7 @@ export const CustomWordsManager: React.FC<CustomWordsManagerProps> = ({
                         setIsAddModalOpen(true);
                       }}
                       title="Edit Word"
-                      className="p-2 rounded-xl text-zinc-400 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-zinc-200 dark:hover:bg-zinc-800 transition-colors"
+                      className="p-2 rounded-xl text-zinc-400 hover:text-violet-600 dark:hover:text-violet-400 hover:bg-zinc-200 dark:hover:bg-zinc-800 transition-colors"
                     >
                       <Edit3 className="w-4 h-4" />
                     </button>

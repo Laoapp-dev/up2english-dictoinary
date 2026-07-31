@@ -122,9 +122,9 @@ export const WordOfTheDayCard: React.FC<WordOfTheDayCardProps> = ({ onSelectWord
 
   if (isLoading) {
     return (
-      <div className="w-full max-w-3xl mx-auto p-6 bg-gradient-to-r from-indigo-900/10 via-indigo-50/50 to-slate-50 dark:from-slate-900 dark:to-slate-900 rounded-2xl border border-indigo-100 dark:border-indigo-950/60 animate-pulse flex items-center justify-between">
+      <div className="w-full max-w-3xl mx-auto p-6 bg-gradient-to-r from-violet-900/10 via-violet-50/50 to-slate-50 dark:from-slate-900 dark:to-slate-900 rounded-2xl border border-violet-100 dark:border-violet-950/60 animate-pulse flex items-center justify-between">
         <div className="space-y-2">
-          <div className="h-4 w-32 bg-indigo-200/60 dark:bg-indigo-900/60 rounded" />
+          <div className="h-4 w-32 bg-violet-200/60 dark:bg-violet-900/60 rounded" />
           <div className="h-8 w-48 bg-slate-200 dark:bg-slate-800 rounded" />
         </div>
       </div>
@@ -139,15 +139,15 @@ export const WordOfTheDayCard: React.FC<WordOfTheDayCardProps> = ({ onSelectWord
   return (
     <div 
       onClick={() => onSelectWord(wotdEntry.word)}
-      className="w-full max-w-3xl mx-auto bg-gradient-to-br from-indigo-50/90 via-white to-slate-50 dark:from-slate-900 dark:via-slate-900 dark:to-indigo-950/30 rounded-2xl p-6 sm:p-7 border border-indigo-200/80 dark:border-indigo-900/60 shadow-sm hover:border-indigo-400 dark:hover:border-indigo-700 transition-all cursor-pointer group relative overflow-hidden"
+      className="w-full max-w-3xl mx-auto bg-gradient-to-br from-violet-50/90 via-white to-slate-50 dark:from-slate-900 dark:via-slate-900 dark:to-violet-950/30 rounded-2xl p-6 sm:p-7 border border-violet-200/80 dark:border-violet-900/60 shadow-sm hover:border-violet-400 dark:hover:border-violet-700 transition-all cursor-pointer group relative overflow-hidden"
     >
       {/* Decorative background accent */}
-      <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-500/5 rounded-full blur-2xl pointer-events-none" />
+      <div className="absolute top-0 right-0 w-32 h-32 bg-violet-500/5 rounded-full blur-2xl pointer-events-none" />
 
       {/* Card Header */}
       <div className="flex items-center justify-between mb-3 flex-wrap gap-2">
         <div className="flex items-center gap-2">
-          <span className="px-3 py-1 bg-indigo-600 text-white rounded-full text-xs font-bold flex items-center gap-1.5 shadow-xs">
+          <span className="px-3 py-1 bg-violet-600 text-white rounded-full text-xs font-bold flex items-center gap-1.5 shadow-xs">
             <Sparkles className="w-3.5 h-3.5" /> Word of the Day
           </span>
           <span className="text-xs font-medium text-slate-500 dark:text-slate-400 flex items-center gap-1">
@@ -162,7 +162,7 @@ export const WordOfTheDayCard: React.FC<WordOfTheDayCardProps> = ({ onSelectWord
               loadWordOfTheDay(true);
             }}
             title="Refresh Word of the Day"
-            className="p-1.5 rounded-lg text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+            className="p-1.5 rounded-lg text-slate-400 hover:text-violet-600 dark:hover:text-violet-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
           >
             <RefreshCw className="w-3.5 h-3.5" />
           </button>
@@ -184,7 +184,7 @@ export const WordOfTheDayCard: React.FC<WordOfTheDayCardProps> = ({ onSelectWord
       {/* Main Content */}
       <div className="flex items-baseline justify-between gap-4 flex-wrap">
         <div className="flex items-baseline gap-3">
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white capitalize tracking-tight group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white capitalize tracking-tight group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors">
             {wotdEntry.word}
           </h2>
           {wotdEntry.phonetic && (
@@ -193,7 +193,7 @@ export const WordOfTheDayCard: React.FC<WordOfTheDayCardProps> = ({ onSelectWord
             </span>
           )}
           {firstMeaning?.partOfSpeech && (
-            <span className="text-xs px-2 py-0.5 rounded bg-indigo-100 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 font-bold lowercase">
+            <span className="text-xs px-2 py-0.5 rounded bg-violet-100 dark:bg-violet-950 text-violet-700 dark:text-violet-300 font-bold lowercase">
               {firstMeaning.partOfSpeech}
             </span>
           )}
@@ -203,8 +203,8 @@ export const WordOfTheDayCard: React.FC<WordOfTheDayCardProps> = ({ onSelectWord
           onClick={handlePlayAudio}
           className={`p-2 rounded-lg transition-all flex items-center gap-1.5 text-xs font-semibold ${
             isPlayingAudio
-              ? 'bg-indigo-600 text-white'
-              : 'bg-indigo-100 dark:bg-indigo-900/60 text-indigo-600 dark:text-indigo-300 hover:bg-indigo-600 hover:text-white'
+              ? 'bg-violet-600 text-white'
+              : 'bg-violet-100 dark:bg-violet-900/60 text-violet-600 dark:text-violet-300 hover:bg-violet-600 hover:text-white'
           }`}
         >
           <Volume2 className="w-4 h-4" />
@@ -220,7 +220,7 @@ export const WordOfTheDayCard: React.FC<WordOfTheDayCardProps> = ({ onSelectWord
       )}
 
       {/* Footer Link */}
-      <div className="mt-3 flex items-center justify-end text-xs font-semibold text-indigo-600 dark:text-indigo-400 group-hover:translate-x-1 transition-transform">
+      <div className="mt-3 flex items-center justify-end text-xs font-semibold text-violet-600 dark:text-violet-400 group-hover:translate-x-1 transition-transform">
         <span>Explore full entry & synonyms</span>
         <ArrowRight className="w-3.5 h-3.5 ml-1" />
       </div>

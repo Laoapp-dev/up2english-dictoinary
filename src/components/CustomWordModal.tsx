@@ -89,7 +89,7 @@ export const CustomWordModal: React.FC<CustomWordModalProps> = ({
         {/* Header */}
         <div className="flex items-center justify-between pb-4 border-b border-zinc-100 dark:border-zinc-700">
           <div className="flex items-center gap-3">
-            <div className="p-2.5 rounded-xl bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400">
+            <div className="p-2.5 rounded-xl bg-violet-50 dark:bg-violet-950/60 text-violet-600 dark:text-violet-400">
               <Plus className="w-5 h-5" />
             </div>
             <h3 className="text-xl font-bold text-zinc-900 dark:text-zinc-100">
@@ -125,7 +125,7 @@ export const CustomWordModal: React.FC<CustomWordModalProps> = ({
                 value={word}
                 onChange={e => setWord(e.target.value)}
                 placeholder="e.g. serendipity"
-                className="w-full px-3.5 py-2.5 rounded-xl bg-zinc-50 dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 border border-zinc-200 dark:border-zinc-700 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/50"
+                className="w-full px-3.5 py-2.5 rounded-xl bg-zinc-50 dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 border border-zinc-200 dark:border-zinc-700 text-sm focus:outline-none focus:ring-2 focus:ring-violet-500/50"
               />
             </div>
 
@@ -138,7 +138,7 @@ export const CustomWordModal: React.FC<CustomWordModalProps> = ({
                 value={pronunciation}
                 onChange={e => setPronunciation(e.target.value)}
                 placeholder="e.g. /ˌsɛrənˈdɪpɪti/"
-                className="w-full px-3.5 py-2.5 rounded-xl bg-zinc-50 dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 border border-zinc-200 dark:border-zinc-700 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/50"
+                className="w-full px-3.5 py-2.5 rounded-xl bg-zinc-50 dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 border border-zinc-200 dark:border-zinc-700 text-sm focus:outline-none focus:ring-2 focus:ring-violet-500/50"
               />
             </div>
           </div>
@@ -151,7 +151,7 @@ export const CustomWordModal: React.FC<CustomWordModalProps> = ({
             <select
               value={partOfSpeech}
               onChange={e => setPartOfSpeech(e.target.value)}
-              className="w-full px-3.5 py-2.5 rounded-xl bg-zinc-50 dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 border border-zinc-200 dark:border-zinc-700 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/50"
+              className="w-full px-3.5 py-2.5 rounded-xl bg-zinc-50 dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 border border-zinc-200 dark:border-zinc-700 text-sm focus:outline-none focus:ring-2 focus:ring-violet-500/50"
             >
               <option value="noun">noun</option>
               <option value="verb">verb</option>
@@ -176,7 +176,7 @@ export const CustomWordModal: React.FC<CustomWordModalProps> = ({
               value={definition}
               onChange={e => setDefinition(e.target.value)}
               placeholder="The occurrence and development of events by chance in a happy way."
-              className="w-full px-3.5 py-2.5 rounded-xl bg-zinc-50 dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 border border-zinc-200 dark:border-zinc-700 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/50"
+              className="w-full px-3.5 py-2.5 rounded-xl bg-zinc-50 dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 border border-zinc-200 dark:border-zinc-700 text-sm focus:outline-none focus:ring-2 focus:ring-violet-500/50"
             />
           </div>
 
@@ -190,7 +190,7 @@ export const CustomWordModal: React.FC<CustomWordModalProps> = ({
               value={example}
               onChange={e => setExample(e.target.value)}
               placeholder="Finding this dataset was pure serendipity."
-              className="w-full px-3.5 py-2.5 rounded-xl bg-zinc-50 dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 border border-zinc-200 dark:border-zinc-700 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/50"
+              className="w-full px-3.5 py-2.5 rounded-xl bg-zinc-50 dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 border border-zinc-200 dark:border-zinc-700 text-sm focus:outline-none focus:ring-2 focus:ring-violet-500/50"
             />
           </div>
 
@@ -205,7 +205,7 @@ export const CustomWordModal: React.FC<CustomWordModalProps> = ({
                 value={synonyms}
                 onChange={e => setSynonyms(e.target.value)}
                 placeholder="chance, fluke, fortuity"
-                className="w-full px-3.5 py-2.5 rounded-xl bg-zinc-50 dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 border border-zinc-200 dark:border-zinc-700 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/50"
+                className="w-full px-3.5 py-2.5 rounded-xl bg-zinc-50 dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 border border-zinc-200 dark:border-zinc-700 text-sm focus:outline-none focus:ring-2 focus:ring-violet-500/50"
               />
             </div>
 
@@ -218,7 +218,7 @@ export const CustomWordModal: React.FC<CustomWordModalProps> = ({
                 value={antonyms}
                 onChange={e => setAntonyms(e.target.value)}
                 placeholder="misfortune, design"
-                className="w-full px-3.5 py-2.5 rounded-xl bg-zinc-50 dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 border border-zinc-200 dark:border-zinc-700 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/50"
+                className="w-full px-3.5 py-2.5 rounded-xl bg-zinc-50 dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 border border-zinc-200 dark:border-zinc-700 text-sm focus:outline-none focus:ring-2 focus:ring-violet-500/50"
               />
             </div>
           </div>
@@ -234,7 +234,7 @@ export const CustomWordModal: React.FC<CustomWordModalProps> = ({
             </button>
             <button
               type="submit"
-              className="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-xl text-xs flex items-center gap-1.5 shadow-sm transition-all"
+              className="px-5 py-2.5 bg-violet-600 hover:bg-violet-700 text-white font-semibold rounded-xl text-xs flex items-center gap-1.5 shadow-sm transition-all"
             >
               <Save className="w-4 h-4" />
               Save Word

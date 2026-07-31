@@ -47,7 +47,7 @@ export const HistoryModal: React.FC<HistoryModalProps> = ({
         {/* Header */}
         <div className="flex items-center justify-between pb-4 border-b border-slate-200 dark:border-slate-800 flex-shrink-0">
           <div className="flex items-center gap-3">
-            <div className="p-2.5 rounded-lg bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400">
+            <div className="p-2.5 rounded-lg bg-violet-50 dark:bg-violet-950/60 text-violet-600 dark:text-violet-400">
               <History className="w-5 h-5" />
             </div>
             <div>
@@ -94,11 +94,11 @@ export const HistoryModal: React.FC<HistoryModalProps> = ({
                   onSelectWord(item.word);
                   onClose();
                 }}
-                className="w-full text-left p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-800 hover:bg-indigo-50/50 dark:hover:bg-slate-800 hover:border-indigo-400 transition-all flex items-center justify-between group"
+                className="w-full text-left p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-800 hover:bg-violet-50/50 dark:hover:bg-slate-800 hover:border-violet-400 transition-all flex items-center justify-between group"
               >
                 <div className="flex items-center gap-3">
-                  <Clock className="w-4 h-4 text-slate-400 group-hover:text-indigo-500" />
-                  <span className="font-semibold text-sm text-slate-800 dark:text-slate-200 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 capitalize">
+                  <Clock className="w-4 h-4 text-slate-400 group-hover:text-violet-500" />
+                  <span className="font-semibold text-sm text-slate-800 dark:text-slate-200 group-hover:text-violet-600 dark:group-hover:text-violet-400 capitalize">
                     {item.word}
                   </span>
                 </div>
@@ -110,7 +110,7 @@ export const HistoryModal: React.FC<HistoryModalProps> = ({
                       minute: '2-digit',
                     })}
                   </span>
-                  <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity text-indigo-500" />
+                  <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity text-violet-500" />
                 </div>
               </button>
             ))

@@ -226,7 +226,7 @@ export default function App() {
   };
 
   return (
-    <div className="h-screen flex flex-col bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 font-sans overflow-hidden transition-colors selection:bg-indigo-500 selection:text-white">
+    <div className="h-screen flex flex-col bg-gradient-to-br from-slate-50 via-white to-violet-50/60 dark:from-slate-950 dark:via-slate-950 dark:to-violet-950/30 text-slate-900 dark:text-slate-100 font-sans overflow-hidden transition-colors selection:bg-violet-500 selection:text-white">
       
       {/* Top Header Navigation */}
       <Header
@@ -262,7 +262,7 @@ export default function App() {
         {/* Drawer Header */}
         <div className="flex items-center justify-between pb-4 mb-6 border-b border-slate-200 dark:border-slate-800">
           <div className="flex items-center gap-2.5">
-            <div className="w-7 h-7 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-bold text-sm shadow-xs">
+            <div className="w-7 h-7 bg-violet-600 rounded-lg flex items-center justify-center text-white font-bold text-sm shadow-xs">
               U
             </div>
             <h2 className="text-base font-bold text-slate-800 dark:text-slate-100">
@@ -297,7 +297,7 @@ export default function App() {
                     }}
                     className={`p-3 text-sm font-medium transition-all cursor-pointer flex items-center justify-between ${
                       isActive
-                        ? 'bg-slate-50 dark:bg-slate-800 border-l-4 border-indigo-500 text-indigo-700 dark:text-indigo-300 font-semibold rounded-r-lg shadow-xs'
+                        ? 'bg-slate-50 dark:bg-slate-800 border-l-4 border-violet-500 text-violet-700 dark:text-violet-300 font-semibold rounded-r-lg shadow-xs'
                         : 'hover:bg-slate-50 dark:hover:bg-slate-800/60 text-slate-600 dark:text-slate-300 rounded-lg'
                     }`}
                   >
@@ -328,13 +328,13 @@ export default function App() {
                 setIsImportExportOpen(true);
                 setIsSidebarOpen(false);
               }}
-              className="w-full flex items-center justify-between p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-indigo-300 dark:hover:border-indigo-700 transition-colors group bg-white dark:bg-slate-900"
+              className="w-full flex items-center justify-between p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-violet-300 dark:hover:border-violet-700 transition-colors group bg-white dark:bg-slate-900"
             >
               <div className="flex items-center gap-3 text-sm font-medium text-slate-700 dark:text-slate-200">
-                <Upload className="w-4 h-4 text-slate-400 group-hover:text-indigo-500 transition-colors" />
+                <Upload className="w-4 h-4 text-slate-400 group-hover:text-violet-500 transition-colors" />
                 Import / Export
               </div>
-              <span className="text-[10px] bg-indigo-50 dark:bg-indigo-950/80 px-1.5 py-0.5 rounded font-bold text-indigo-600 dark:text-indigo-400">
+              <span className="text-[10px] bg-violet-50 dark:bg-violet-950/80 px-1.5 py-0.5 rounded font-bold text-violet-600 dark:text-violet-400">
                 JSON/CSV
               </span>
             </button>
@@ -344,13 +344,13 @@ export default function App() {
                 setIsQuizOpen(true);
                 setIsSidebarOpen(false);
               }}
-              className="w-full flex items-center justify-between p-3 rounded-xl border border-indigo-200/80 dark:border-indigo-900/60 bg-indigo-50/40 dark:bg-indigo-950/20 hover:bg-indigo-50 dark:hover:bg-indigo-950/40 transition-colors group"
+              className="w-full flex items-center justify-between p-3 rounded-xl border border-violet-200/80 dark:border-violet-900/60 bg-violet-50/40 dark:bg-violet-950/20 hover:bg-violet-50 dark:hover:bg-violet-950/40 transition-colors group"
             >
-              <div className="flex items-center gap-3 text-sm font-semibold text-indigo-700 dark:text-indigo-300">
-                <Brain className="w-4 h-4 text-indigo-600 dark:text-indigo-400 group-hover:scale-110 transition-transform" />
+              <div className="flex items-center gap-3 text-sm font-semibold text-violet-700 dark:text-violet-300">
+                <Brain className="w-4 h-4 text-violet-600 dark:text-violet-400 group-hover:scale-110 transition-transform" />
                 Vocabulary Quiz
               </div>
-              <span className="text-[10px] bg-indigo-600 text-white px-2 py-0.5 rounded-full font-bold">
+              <span className="text-[10px] bg-violet-600 text-white px-2 py-0.5 rounded-full font-bold">
                 Practice
               </span>
             </button>
@@ -360,14 +360,14 @@ export default function App() {
                 setIsBookmarksOpen(true);
                 setIsSidebarOpen(false);
               }}
-              className="w-full flex items-center justify-between p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-indigo-300 dark:hover:border-indigo-700 transition-colors bg-white dark:bg-slate-900"
+              className="w-full flex items-center justify-between p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-violet-300 dark:hover:border-violet-700 transition-colors bg-white dark:bg-slate-900"
             >
               <div className="flex items-center gap-3 text-sm font-medium text-slate-700 dark:text-slate-200">
                 <Bookmark className="w-4 h-4 text-slate-400" />
                 Saved Bookmarks
               </div>
               {bookmarkedCount > 0 && (
-                <span className="text-[10px] bg-indigo-600 text-white px-2 py-0.5 rounded-full font-bold">
+                <span className="text-[10px] bg-violet-600 text-white px-2 py-0.5 rounded-full font-bold">
                   {bookmarkedCount}
                 </span>
               )}
@@ -378,7 +378,7 @@ export default function App() {
                 setIsCustomWordsOpen(true);
                 setIsSidebarOpen(false);
               }}
-              className="w-full flex items-center justify-between p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-indigo-300 dark:hover:border-indigo-700 transition-colors bg-white dark:bg-slate-900"
+              className="w-full flex items-center justify-between p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-violet-300 dark:hover:border-violet-700 transition-colors bg-white dark:bg-slate-900"
             >
               <div className="flex items-center gap-3 text-sm font-medium text-slate-700 dark:text-slate-200">
                 <FolderEdit className="w-4 h-4 text-slate-400" />
@@ -391,10 +391,10 @@ export default function App() {
                 setIsAddWordOpen(true);
                 setIsSidebarOpen(false);
               }}
-              className="w-full flex items-center justify-between p-3 rounded-xl border border-indigo-200 dark:border-indigo-900/60 bg-indigo-50/50 dark:bg-indigo-950/30 hover:bg-indigo-50 transition-colors"
+              className="w-full flex items-center justify-between p-3 rounded-xl border border-violet-200 dark:border-violet-900/60 bg-violet-50/50 dark:bg-violet-950/30 hover:bg-violet-50 transition-colors"
             >
-              <div className="flex items-center gap-3 text-sm font-medium text-indigo-700 dark:text-indigo-300">
-                <Plus className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
+              <div className="flex items-center gap-3 text-sm font-medium text-violet-700 dark:text-violet-300">
+                <Plus className="w-4 h-4 text-violet-600 dark:text-violet-400" />
                 Add New Entry
               </div>
             </button>
@@ -413,14 +413,14 @@ export default function App() {
           >
             <div className="flex items-center gap-3 text-sm font-medium text-slate-700 dark:text-slate-200">
               {darkMode ? (
-                <Moon className="w-4 h-4 text-indigo-400" />
+                <Moon className="w-4 h-4 text-violet-400" />
               ) : (
                 <Sun className="w-4 h-4 text-amber-500" />
               )}
               <span>{darkMode ? 'Dark Theme' : 'Light Theme'}</span>
             </div>
             <div className={`w-10 h-6 rounded-full p-0.5 transition-colors duration-300 flex items-center ${
-              darkMode ? 'bg-indigo-600 justify-end' : 'bg-slate-300 justify-start'
+              darkMode ? 'bg-violet-600 justify-end' : 'bg-slate-300 justify-start'
             }`}>
               <div className="w-5 h-5 rounded-full bg-white shadow-xs" />
             </div>
@@ -428,8 +428,8 @@ export default function App() {
         </div>
 
         {/* Bottom Offline Info Banner */}
-        <div className="mt-auto p-4 bg-indigo-50 dark:bg-indigo-950/40 rounded-2xl border border-indigo-100 dark:border-indigo-900">
-          <p className="text-xs text-indigo-700 dark:text-indigo-300 leading-relaxed font-medium">
+        <div className="mt-auto p-4 bg-violet-50 dark:bg-violet-950/40 rounded-2xl border border-violet-100 dark:border-violet-900">
+          <p className="text-xs text-violet-700 dark:text-violet-300 leading-relaxed font-medium">
             Up2Eng works fully offline. Cached words are saved directly to your device's IndexedDB.
           </p>
         </div>
@@ -438,7 +438,7 @@ export default function App() {
 
       {/* Main Container: Word Lookup & Definition Display */}
       <div className="flex-1 overflow-hidden flex flex-col">
-        <main className="flex-1 p-4 sm:p-8 overflow-y-auto bg-slate-50 dark:bg-slate-950">
+        <main className="flex-1 p-4 sm:p-8 overflow-y-auto bg-transparent">
           <div className="max-w-4xl mx-auto space-y-6">
             
             {/* Search Bar Input */}
@@ -450,8 +450,8 @@ export default function App() {
 
             {/* Background sync indicator: shown instantly from cache while fresher data is fetched */}
             {result?.revalidating && (
-              <div className="w-full max-w-3xl mx-auto -mt-2 flex items-center justify-center gap-1.5 text-[11px] font-medium text-indigo-500 dark:text-indigo-400">
-                <span className="w-1.5 h-1.5 rounded-full bg-indigo-500 animate-pulse" />
+              <div className="w-full max-w-3xl mx-auto -mt-2 flex items-center justify-center gap-1.5 text-[11px] font-medium text-violet-500 dark:text-violet-400">
+                <span className="w-1.5 h-1.5 rounded-full bg-violet-500 animate-pulse" />
                 Syncing latest definitions in the background&hellip;
               </div>
             )}
@@ -462,7 +462,7 @@ export default function App() {
             {/* Content Display */}
             {isLoading ? (
               <div className="w-full max-w-3xl mx-auto p-12 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 text-center shadow-sm flex flex-col items-center justify-center gap-4">
-                <div className="w-10 h-10 border-4 border-indigo-600/30 border-t-indigo-600 rounded-full animate-spin" />
+                <div className="w-10 h-10 border-4 border-violet-600/30 border-t-violet-600 rounded-full animate-spin" />
                 <p className="text-sm font-semibold text-slate-500 dark:text-slate-400">
                   Fetching definition for "{currentWord}"...
                 </p>
@@ -494,7 +494,7 @@ export default function App() {
                 <div className="pt-2 flex justify-center">
                   <button
                     onClick={() => setIsAddWordOpen(true)}
-                    className="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 active:scale-[0.98] text-white font-semibold rounded-2xl text-sm flex items-center gap-2.5 shadow-md shadow-indigo-500/20 transition-all"
+                    className="px-6 py-3 bg-violet-600 hover:bg-violet-700 active:scale-[0.98] text-white font-semibold rounded-2xl text-sm flex items-center gap-2.5 shadow-md shadow-violet-500/20 transition-all"
                   >
                     <Plus className="w-4 h-4 stroke-[2.5]" />
                     <span>Add "{currentWord}" to Custom Dictionary</span>
@@ -514,10 +514,10 @@ export default function App() {
                           href={link.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="p-3.5 rounded-xl bg-slate-50/80 dark:bg-slate-800/50 border border-slate-200/80 dark:border-slate-700/60 hover:bg-white dark:hover:bg-slate-800 hover:border-indigo-400 dark:hover:border-indigo-500 text-sm font-medium text-slate-700 dark:text-slate-200 flex items-center justify-between transition-all group shadow-2xs"
+                          className="p-3.5 rounded-xl bg-slate-50/80 dark:bg-slate-800/50 border border-slate-200/80 dark:border-slate-700/60 hover:bg-white dark:hover:bg-slate-800 hover:border-violet-400 dark:hover:border-violet-500 text-sm font-medium text-slate-700 dark:text-slate-200 flex items-center justify-between transition-all group shadow-2xs"
                         >
-                          <span className="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">{link.title}</span>
-                          <ExternalLink className="w-4 h-4 text-slate-400 group-hover:text-indigo-500 dark:group-hover:text-indigo-400 transition-colors shrink-0" />
+                          <span className="group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors">{link.title}</span>
+                          <ExternalLink className="w-4 h-4 text-slate-400 group-hover:text-violet-500 dark:group-hover:text-violet-400 transition-colors shrink-0" />
                         </a>
                       ))}
                     </div>
@@ -535,7 +535,7 @@ export default function App() {
       <footer className="h-8 bg-slate-800 dark:bg-slate-950 text-[10px] flex items-center px-6 justify-between text-slate-400 dark:text-slate-500 uppercase tracking-widest shrink-0 border-t border-slate-700 dark:border-slate-800 font-mono">
         <div className="flex items-center gap-6">
           <span className="flex items-center gap-1.5">
-            <Database className="w-3 h-3 text-indigo-400" /> Words in IndexedDB: {totalDbWords.toLocaleString()}
+            <Database className="w-3 h-3 text-violet-400" /> Words in IndexedDB: {totalDbWords.toLocaleString()}
           </span>
           <span className="hidden sm:inline">Active Word: {currentWord}</span>
         </div>

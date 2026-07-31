@@ -1,63 +1,76 @@
 {
-  "background_color": "#ffffff",
-  "description": "Fast, lightweight online &amp;amp; offline dictionary application with IndexedDB caching, speech pronunciation, and CSV/JSON dataset import.",
-  "dir": "ltr",
-  "display": "standalone",
-  "name": "Up2Eng",
-  "orientation": "any",
-  "scope": "/",
+  "id": ".",
+  "name": "Up2Eng Dictionary",
   "short_name": "Up2Eng",
-  "start_url": "/",
-  "theme_color": "#4f46e5",
+  "description": "Fast, lightweight online & offline dictionary application with IndexedDB caching, multi-source definitions (Merriam-Webster, Free Dictionary API), speech pronunciation, and CSV/JSON dataset import.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
+  "orientation": "any",
+  "dir": "ltr",
+  "lang": "en",
+  "background_color": "#ffffff",
+  "theme_color": "#7c3aed",
+  "categories": ["education", "reference", "productivity"],
   "icons": [
     {
-      "src": "https://laoapp-dev.github.io/up2english-dictoinary/icon.svg",
+      "src": "./icon.svg",
       "type": "image/svg+xml",
-      "isSquare": false,
-      "isPng": false,
-      "isWebp": false,
-      "isJpg": false,
-      "width": 0,
-      "is512x512": false,
-      "is256x256": false,
-      "is192x192": false
+      "sizes": "any",
+      "purpose": "any"
     },
     {
-      "src": "https://laoapp-dev.github.io/up2english-dictoinary/favicon-32.png",
-      "type": "image/png",
-      "sizes": "32x32",
-      "isSquare": true,
-      "isPng": true,
-      "isWebp": false,
-      "isJpg": false,
-      "width": 32,
-      "is512x512": false,
-      "is256x256": false,
-      "is192x192": false
-    },
-    {
-      "src": "https://laoapp-dev.github.io/up2english-dictoinary/favicon-16.png",
+      "src": "./favicon-16.png",
       "type": "image/png",
       "sizes": "16x16",
-      "isSquare": true,
-      "isPng": true,
-      "isWebp": false,
-      "isJpg": false,
-      "width": 16,
-      "is512x512": false,
-      "is256x256": false,
-      "is192x192": false
+      "purpose": "any"
     },
     {
-      "src": "https://laoapp-dev.github.io/up2english-dictoinary/icon-192.png",
-      "isSquare": false,
-      "isPng": true,
-      "isWebp": false,
-      "isJpg": false,
-      "width": 0,
-      "is512x512": false,
-      "is256x256": false,
-      "is192x192": false
+      "src": "./favicon-32.png",
+      "type": "image/png",
+      "sizes": "32x32",
+      "purpose": "any"
+    },
+    {
+      "src": "./icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any"
+    },
+    {
+      "src": "./icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any"
+    },
+    {
+      "src": "./icon-192-maskable.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "maskable"
+    },
+    {
+      "src": "./icon-512-maskable.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Random Word",
+      "short_name": "Random",
+      "description": "Look up a random word from your dictionary",
+      "url": "./?action=random",
+      "icons": [{ "src": "./icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Saved Words",
+      "short_name": "Saved",
+      "description": "Open your bookmarked words",
+      "url": "./?action=saved",
+      "icons": [{ "src": "./icon-192.png", "sizes": "192x192" }]
     }
   ]
 }

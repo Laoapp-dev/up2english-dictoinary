@@ -223,7 +223,7 @@ export const QuizModal: React.FC<QuizModalProps> = ({
         {/* Header */}
         <div className="flex items-center justify-between pb-4 border-b border-slate-200 dark:border-slate-800 flex-shrink-0">
           <div className="flex items-center gap-3">
-            <div className="p-3 rounded-2xl bg-indigo-600 text-white shadow-md shadow-indigo-500/20">
+            <div className="p-3 rounded-2xl bg-violet-600 text-white shadow-md shadow-violet-500/20">
               <Brain className="w-6 h-6" />
             </div>
             <div>
@@ -251,7 +251,7 @@ export const QuizModal: React.FC<QuizModalProps> = ({
               onClick={() => setQuizType('multiple-choice')}
               className={`px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-all ${
                 quizType === 'multiple-choice'
-                  ? 'bg-white dark:bg-slate-900 text-indigo-600 dark:text-indigo-400 shadow-xs'
+                  ? 'bg-white dark:bg-slate-900 text-violet-600 dark:text-violet-400 shadow-xs'
                   : 'text-slate-500 dark:text-slate-400 hover:text-slate-900'
               }`}
             >
@@ -263,7 +263,7 @@ export const QuizModal: React.FC<QuizModalProps> = ({
               onClick={() => setQuizType('flashcards')}
               className={`px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-all ${
                 quizType === 'flashcards'
-                  ? 'bg-white dark:bg-slate-900 text-indigo-600 dark:text-indigo-400 shadow-xs'
+                  ? 'bg-white dark:bg-slate-900 text-violet-600 dark:text-violet-400 shadow-xs'
                   : 'text-slate-500 dark:text-slate-400 hover:text-slate-900'
               }`}
             >
@@ -274,7 +274,7 @@ export const QuizModal: React.FC<QuizModalProps> = ({
 
           {/* Question Counter / Pool status */}
           <div className="text-xs font-semibold text-slate-500 dark:text-slate-400 flex items-center gap-2">
-            <Bookmark className="w-3.5 h-3.5 text-indigo-500" />
+            <Bookmark className="w-3.5 h-3.5 text-violet-500" />
             <span>Pool: {bookmarks.length} saved word{bookmarks.length === 1 ? '' : 's'}</span>
           </div>
         </div>
@@ -285,7 +285,7 @@ export const QuizModal: React.FC<QuizModalProps> = ({
           {/* Empty state if no words available */}
           {totalQuestions === 0 ? (
             <div className="text-center py-12 space-y-4">
-              <div className="w-16 h-16 mx-auto rounded-full bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 flex items-center justify-center">
+              <div className="w-16 h-16 mx-auto rounded-full bg-violet-50 dark:bg-violet-950/60 text-violet-600 dark:text-violet-400 flex items-center justify-center">
                 <Bookmark className="w-8 h-8" />
               </div>
               <div className="space-y-1">
@@ -302,7 +302,7 @@ export const QuizModal: React.FC<QuizModalProps> = ({
                     generateQuestions(allDbWords, allDbWords);
                   }
                 }}
-                className="mt-4 px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-semibold inline-flex items-center gap-2 shadow-sm"
+                className="mt-4 px-5 py-2.5 bg-violet-600 hover:bg-violet-700 text-white rounded-xl text-xs font-semibold inline-flex items-center gap-2 shadow-sm"
               >
                 <Shuffle className="w-4 h-4" />
                 <span>Practice with Sample Words ({allDbWords.length})</span>
@@ -327,7 +327,7 @@ export const QuizModal: React.FC<QuizModalProps> = ({
 
               {/* Score Display Card */}
               <div className="max-w-md mx-auto p-6 bg-slate-50 dark:bg-slate-800/60 rounded-2xl border border-slate-200/80 dark:border-slate-700/60 space-y-3">
-                <div className="text-4xl font-extrabold text-indigo-600 dark:text-indigo-400">
+                <div className="text-4xl font-extrabold text-violet-600 dark:text-violet-400">
                   {quizType === 'multiple-choice' ? `${score} / ${totalQuestions}` : `${flashcardKnownCount} / ${totalQuestions}`}
                 </div>
                 <p className="text-xs font-semibold uppercase tracking-wider text-slate-400">
@@ -335,7 +335,7 @@ export const QuizModal: React.FC<QuizModalProps> = ({
                 </p>
                 <div className="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2.5 overflow-hidden">
                   <div 
-                    className="bg-indigo-600 h-2.5 rounded-full transition-all duration-500"
+                    className="bg-violet-600 h-2.5 rounded-full transition-all duration-500"
                     style={{
                       width: `${Math.round(
                         ((quizType === 'multiple-choice' ? score : flashcardKnownCount) / totalQuestions) * 100
@@ -349,7 +349,7 @@ export const QuizModal: React.FC<QuizModalProps> = ({
               <div className="pt-4 flex items-center justify-center gap-3">
                 <button
                   onClick={() => generateQuestions(bookmarks.length >= 2 ? bookmarks : allDbWords, allDbWords)}
-                  className="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-2xl text-sm flex items-center gap-2 shadow-md shadow-indigo-500/20 transition-all"
+                  className="px-6 py-3 bg-violet-600 hover:bg-violet-700 text-white font-semibold rounded-2xl text-sm flex items-center gap-2 shadow-md shadow-violet-500/20 transition-all"
                 >
                   <RotateCcw className="w-4 h-4" />
                   <span>Try Again</span>
@@ -376,15 +376,15 @@ export const QuizModal: React.FC<QuizModalProps> = ({
                 </div>
                 <div className="w-full bg-slate-100 dark:bg-slate-800 rounded-full h-2 overflow-hidden">
                   <div 
-                    className="bg-indigo-600 h-2 rounded-full transition-all duration-300"
+                    className="bg-violet-600 h-2 rounded-full transition-all duration-300"
                     style={{ width: `${((currentIndex + 1) / totalQuestions) * 100}%` }}
                   />
                 </div>
               </div>
 
               {/* Target Word Prompt */}
-              <div className="p-6 rounded-2xl bg-indigo-50/60 dark:bg-indigo-950/40 border border-indigo-100 dark:border-indigo-900/60 text-center space-y-3">
-                <span className="text-[11px] font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400">
+              <div className="p-6 rounded-2xl bg-violet-50/60 dark:bg-violet-950/40 border border-violet-100 dark:border-violet-900/60 text-center space-y-3">
+                <span className="text-[11px] font-bold uppercase tracking-wider text-violet-600 dark:text-violet-400">
                   What is the definition of
                 </span>
                 <div className="flex items-center justify-center gap-3">
@@ -394,12 +394,12 @@ export const QuizModal: React.FC<QuizModalProps> = ({
                   <button
                     onClick={(e) => handlePlayAudio(e, currentQ.targetWord.word, currentQ.targetWord.phonetics?.find(p => p.audio)?.audio)}
                     disabled={isPlayingAudio}
-                    className="p-2 rounded-full bg-indigo-100 dark:bg-indigo-900/80 text-indigo-600 dark:text-indigo-300 hover:bg-indigo-600 hover:text-white transition-colors"
+                    className="p-2 rounded-full bg-violet-100 dark:bg-violet-900/80 text-violet-600 dark:text-violet-300 hover:bg-violet-600 hover:text-white transition-colors"
                   >
                     <Volume2 className="w-4 h-4" />
                   </button>
                 </div>
-                <span className="text-xs px-2.5 py-0.5 rounded-md bg-indigo-100 dark:bg-indigo-900/60 text-indigo-700 dark:text-indigo-300 font-semibold lowercase inline-block">
+                <span className="text-xs px-2.5 py-0.5 rounded-md bg-violet-100 dark:bg-violet-900/60 text-violet-700 dark:text-violet-300 font-semibold lowercase inline-block">
                   {currentQ.partOfSpeech}
                 </span>
               </div>
@@ -407,7 +407,7 @@ export const QuizModal: React.FC<QuizModalProps> = ({
               {/* Options Grid */}
               <div className="space-y-3">
                 {currentQ.options.map((option, idx) => {
-                  let buttonStyle = "bg-slate-50 dark:bg-slate-800/60 border-slate-200/80 dark:border-slate-700/60 text-slate-800 dark:text-slate-200 hover:border-indigo-400";
+                  let buttonStyle = "bg-slate-50 dark:bg-slate-800/60 border-slate-200/80 dark:border-slate-700/60 text-slate-800 dark:text-slate-200 hover:border-violet-400";
                   
                   if (isAnswerSubmitted) {
                     if (idx === currentQ.correctOptionIndex) {
@@ -447,7 +447,7 @@ export const QuizModal: React.FC<QuizModalProps> = ({
                 <div className="pt-2 flex justify-end animate-fade-in">
                   <button
                     onClick={handleNextQuestion}
-                    className="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-2xl text-xs sm:text-sm flex items-center gap-2 shadow-md shadow-indigo-500/20 transition-all"
+                    className="px-6 py-3 bg-violet-600 hover:bg-violet-700 text-white font-semibold rounded-2xl text-xs sm:text-sm flex items-center gap-2 shadow-md shadow-violet-500/20 transition-all"
                   >
                     <span>{currentIndex < totalQuestions - 1 ? 'Next Question' : 'See Results'}</span>
                     <ArrowRight className="w-4 h-4" />
@@ -471,11 +471,11 @@ export const QuizModal: React.FC<QuizModalProps> = ({
               {/* Flashcard Box */}
               <div
                 onClick={() => setIsFlipped(!isFlipped)}
-                className="w-full min-h-[260px] p-8 rounded-3xl bg-slate-50 dark:bg-slate-800/80 border-2 border-dashed border-indigo-200 dark:border-indigo-900/80 hover:border-indigo-500 transition-all flex flex-col items-center justify-center text-center cursor-pointer relative shadow-sm group"
+                className="w-full min-h-[260px] p-8 rounded-3xl bg-slate-50 dark:bg-slate-800/80 border-2 border-dashed border-violet-200 dark:border-violet-900/80 hover:border-violet-500 transition-all flex flex-col items-center justify-center text-center cursor-pointer relative shadow-sm group"
               >
                 {!isFlipped ? (
                   <div className="space-y-4 animate-fade-in">
-                    <span className="text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400">
+                    <span className="text-xs font-bold uppercase tracking-wider text-violet-600 dark:text-violet-400">
                       Target Word
                     </span>
                     <h2 className="text-4xl sm:text-5xl font-extrabold text-slate-900 dark:text-white capitalize">
@@ -492,7 +492,7 @@ export const QuizModal: React.FC<QuizModalProps> = ({
                   </div>
                 ) : (
                   <div className="space-y-4 animate-fade-in max-w-lg">
-                    <span className="text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400">
+                    <span className="text-xs font-bold uppercase tracking-wider text-violet-600 dark:text-violet-400">
                       Definition & Details
                     </span>
                     <p className="text-lg font-medium text-slate-800 dark:text-slate-100 leading-relaxed">

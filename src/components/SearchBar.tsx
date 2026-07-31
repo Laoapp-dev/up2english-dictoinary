@@ -151,7 +151,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({
       <form onSubmit={handleFormSubmit} className="relative flex items-center group">
         
         {/* Search Input Icon */}
-        <div className="absolute left-4 text-slate-400 group-focus-within:text-indigo-500 pointer-events-none transition-colors">
+        <div className="absolute left-4 text-slate-400 group-focus-within:text-violet-500 pointer-events-none transition-colors">
           <Search className="w-5 h-5" />
         </div>
 
@@ -171,7 +171,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({
           }}
           onKeyDown={handleKeyDown}
           placeholder="Search for a word (e.g., 'Ephemeral', 'Luminous')..."
-          className="block w-full pl-11 pr-28 py-3.5 bg-slate-100 dark:bg-slate-800 border border-transparent dark:border-slate-700/60 rounded-xl text-sm sm:text-base text-slate-800 dark:text-slate-100 placeholder-slate-400 focus:ring-2 focus:ring-indigo-500 focus:bg-white dark:focus:bg-slate-900 transition-all focus:outline-none shadow-sm"
+          className="block w-full pl-11 pr-28 py-3.5 bg-slate-100 dark:bg-slate-800 border border-transparent dark:border-slate-700/60 rounded-xl text-sm sm:text-base text-slate-800 dark:text-slate-100 placeholder-slate-400 focus:ring-2 focus:ring-violet-500 focus:bg-white dark:focus:bg-slate-900 transition-all focus:outline-none shadow-sm"
         />
 
         {/* Right Input Controls */}
@@ -212,7 +212,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({
           <button
             type="submit"
             disabled={isLoading || !query.trim()}
-            className="px-3.5 py-1.5 bg-indigo-600 hover:bg-indigo-700 disabled:opacity-50 text-white rounded-lg font-medium text-xs sm:text-sm flex items-center gap-1.5 shadow-sm transition-all ml-1"
+            className="px-3.5 py-1.5 bg-violet-600 hover:bg-violet-700 disabled:opacity-50 text-white rounded-lg font-medium text-xs sm:text-sm flex items-center gap-1.5 shadow-sm transition-all ml-1"
           >
             {isLoading ? (
               <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
@@ -241,11 +241,11 @@ export const SearchBar: React.FC<SearchBarProps> = ({
                   key={item.word}
                   onClick={() => handleSelectSuggestion(item.word)}
                   className={`w-full text-left px-4 py-2.5 flex items-center justify-between text-sm hover:bg-slate-50 dark:hover:bg-slate-700/60 transition-colors ${
-                    selectedIndex === idx ? 'bg-indigo-50 dark:bg-slate-700/80 text-indigo-700 dark:text-indigo-300' : 'text-slate-800 dark:text-slate-200'
+                    selectedIndex === idx ? 'bg-violet-50 dark:bg-slate-700/80 text-violet-700 dark:text-violet-300' : 'text-slate-800 dark:text-slate-200'
                   }`}
                 >
                   <div className="flex items-center gap-2.5">
-                    <BookOpen className="w-4 h-4 text-indigo-500" />
+                    <BookOpen className="w-4 h-4 text-violet-500" />
                     <span className="font-medium capitalize">
                       {item.word}
                     </span>
@@ -272,7 +272,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({
                   key={item.timestamp + item.word}
                   onClick={() => handleSelectSuggestion(item.word)}
                   className={`w-full text-left px-4 py-2.5 flex items-center justify-between text-sm hover:bg-slate-50 dark:hover:bg-slate-700/60 transition-colors ${
-                    selectedIndex === idx ? 'bg-indigo-50 dark:bg-slate-700/80 text-indigo-700' : 'text-slate-700 dark:text-slate-300'
+                    selectedIndex === idx ? 'bg-violet-50 dark:bg-slate-700/80 text-violet-700' : 'text-slate-700 dark:text-slate-300'
                   }`}
                 >
                   <span className="font-medium capitalize">

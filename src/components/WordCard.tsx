@@ -113,7 +113,7 @@ export const WordCard: React.FC<WordCardProps> = ({
         <div>
           {/* Word Label & Title */}
           <div className="flex items-center gap-2 mb-1">
-            <span className="text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400">
+            <span className="text-xs font-bold uppercase tracking-wider text-violet-600 dark:text-violet-400">
               Word
             </span>
           </div>
@@ -129,8 +129,8 @@ export const WordCard: React.FC<WordCardProps> = ({
               title="Play Audio Pronunciation"
               className={`w-12 h-12 rounded-full flex items-center justify-center transition-all shadow-sm shrink-0 ${
                 isPlayingAudio
-                  ? 'bg-indigo-600 text-white scale-95'
-                  : 'bg-indigo-100 dark:bg-indigo-900/60 text-indigo-600 dark:text-indigo-400 hover:bg-indigo-600 hover:text-white'
+                  ? 'bg-violet-600 text-white scale-95'
+                  : 'bg-violet-100 dark:bg-violet-900/60 text-violet-600 dark:text-violet-400 hover:bg-violet-600 hover:text-white'
               }`}
             >
               <Volume2 className={`w-6 h-6 ${isPlayingAudio ? 'animate-pulse' : ''}`} />
@@ -142,7 +142,7 @@ export const WordCard: React.FC<WordCardProps> = ({
             <span className="text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-wider">
               Pronunciation:
             </span>
-            <span className="text-xl font-serif italic text-indigo-700 dark:text-indigo-300 font-medium">
+            <span className="text-xl font-serif italic text-violet-700 dark:text-violet-300 font-medium">
               {entry.phonetic || (entry.phonetics && entry.phonetics.find(p => p.text)?.text) || `/${entry.word}/`}
             </span>
           </div>
@@ -216,7 +216,7 @@ export const WordCard: React.FC<WordCardProps> = ({
               
               {/* Part of speech header */}
               <div className="flex items-center gap-4 mb-4">
-                <span className="px-3.5 py-1 bg-indigo-600 text-white rounded-lg font-bold text-xs tracking-wide uppercase">
+                <span className="px-3.5 py-1 bg-violet-600 text-white rounded-lg font-bold text-xs tracking-wide uppercase">
                   {meaning.partOfSpeech}
                 </span>
                 <div className="h-px flex-1 bg-slate-200 dark:bg-slate-800" />
@@ -244,7 +244,7 @@ export const WordCard: React.FC<WordCardProps> = ({
                       {/* Sample Sentences */}
                       {defItem.example && (
                         <div className="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-800">
-                          <span className="text-[11px] font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400 block mb-1">
+                          <span className="text-[11px] font-bold uppercase tracking-wider text-violet-600 dark:text-violet-400 block mb-1">
                             Sample Sentence
                           </span>
                           <p className="text-slate-700 dark:text-slate-300 italic font-serif text-base leading-relaxed">
@@ -264,7 +264,7 @@ export const WordCard: React.FC<WordCardProps> = ({
                 {/* Synonyms section */}
                 <div className="space-y-2">
                   <h3 className="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest flex items-center gap-1.5">
-                    <Tag className="w-3.5 h-3.5 text-indigo-500" />
+                    <Tag className="w-3.5 h-3.5 text-violet-500" />
                     Synonyms
                   </h3>
                   {allSynonyms.length > 0 ? (
@@ -273,7 +273,7 @@ export const WordCard: React.FC<WordCardProps> = ({
                         <button
                           key={syn}
                           onClick={() => onSelectWord(syn)}
-                          className="px-3 py-1 bg-indigo-50 dark:bg-indigo-950/60 border border-indigo-200/70 dark:border-indigo-800/50 rounded-lg text-xs font-medium text-indigo-700 dark:text-indigo-300 hover:bg-indigo-100 dark:hover:bg-indigo-900/80 transition-all cursor-pointer"
+                          className="px-3 py-1 bg-violet-50 dark:bg-violet-950/60 border border-violet-200/70 dark:border-violet-800/50 rounded-lg text-xs font-medium text-violet-700 dark:text-violet-300 hover:bg-violet-100 dark:hover:bg-violet-900/80 transition-all cursor-pointer"
                         >
                           {syn}
                         </button>
@@ -322,11 +322,11 @@ export const WordCard: React.FC<WordCardProps> = ({
             className="w-full flex items-center justify-between gap-3 group"
           >
             <h3 className="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest flex items-center gap-1.5">
-              <Layers className="w-3.5 h-3.5 text-indigo-500" />
+              <Layers className="w-3.5 h-3.5 text-violet-500" />
               More Options &mdash; Definitions by Source ({entry.sources.length})
             </h3>
             <ChevronDown
-              className={`w-4 h-4 text-slate-400 transition-transform group-hover:text-indigo-500 ${showMoreSources ? 'rotate-180' : ''}`}
+              className={`w-4 h-4 text-slate-400 transition-transform group-hover:text-violet-500 ${showMoreSources ? 'rotate-180' : ''}`}
             />
           </button>
 
@@ -341,7 +341,7 @@ export const WordCard: React.FC<WordCardProps> = ({
                       onClick={() => setActiveSourceTab(i)}
                       className={`px-3 py-1.5 rounded-lg text-xs font-semibold border transition-all flex items-center gap-1.5 ${
                         activeSourceTab === i
-                          ? PROVIDER_STYLES[src.provider]?.chip || 'bg-indigo-50 text-indigo-700 border-indigo-200'
+                          ? PROVIDER_STYLES[src.provider]?.chip || 'bg-violet-50 text-violet-700 border-violet-200'
                           : 'bg-white dark:bg-slate-900 text-slate-500 dark:text-slate-400 border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800'
                       }`}
                     >

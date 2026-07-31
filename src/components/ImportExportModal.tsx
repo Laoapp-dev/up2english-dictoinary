@@ -153,7 +153,7 @@ export const ImportExportModal: React.FC<ImportExportModalProps> = ({
         {/* Modal Header */}
         <div className="flex items-center justify-between pb-4 border-b border-zinc-100 dark:border-zinc-700">
           <div className="flex items-center gap-3">
-            <div className="p-2.5 rounded-xl bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400">
+            <div className="p-2.5 rounded-xl bg-violet-50 dark:bg-violet-950/60 text-violet-600 dark:text-violet-400">
               <Upload className="w-5 h-5" />
             </div>
             <div>
@@ -182,7 +182,7 @@ export const ImportExportModal: React.FC<ImportExportModalProps> = ({
             }}
             className={`flex-1 py-2 px-3 rounded-xl text-xs sm:text-sm font-semibold transition-all ${
               activeTab === 'import'
-                ? 'bg-white dark:bg-zinc-800 text-indigo-600 dark:text-indigo-400 shadow-sm'
+                ? 'bg-white dark:bg-zinc-800 text-violet-600 dark:text-violet-400 shadow-sm'
                 : 'text-zinc-500 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-200'
             }`}
           >
@@ -195,7 +195,7 @@ export const ImportExportModal: React.FC<ImportExportModalProps> = ({
             }}
             className={`flex-1 py-2 px-3 rounded-xl text-xs sm:text-sm font-semibold transition-all ${
               activeTab === 'paste'
-                ? 'bg-white dark:bg-zinc-800 text-indigo-600 dark:text-indigo-400 shadow-sm'
+                ? 'bg-white dark:bg-zinc-800 text-violet-600 dark:text-violet-400 shadow-sm'
                 : 'text-zinc-500 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-200'
             }`}
           >
@@ -208,7 +208,7 @@ export const ImportExportModal: React.FC<ImportExportModalProps> = ({
             }}
             className={`flex-1 py-2 px-3 rounded-xl text-xs sm:text-sm font-semibold transition-all ${
               activeTab === 'export'
-                ? 'bg-white dark:bg-zinc-800 text-indigo-600 dark:text-indigo-400 shadow-sm'
+                ? 'bg-white dark:bg-zinc-800 text-violet-600 dark:text-violet-400 shadow-sm'
                 : 'text-zinc-500 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-200'
             }`}
           >
@@ -219,7 +219,7 @@ export const ImportExportModal: React.FC<ImportExportModalProps> = ({
         {/* Tab 1: Upload File */}
         {activeTab === 'import' && (
           <div className="mt-6 space-y-4">
-            <div className="border-2 border-dashed border-zinc-300 dark:border-zinc-700 hover:border-indigo-500 dark:hover:border-indigo-400 rounded-2xl p-8 text-center bg-zinc-50/50 dark:bg-zinc-900/30 transition-colors cursor-pointer group relative">
+            <div className="border-2 border-dashed border-zinc-300 dark:border-zinc-700 hover:border-violet-500 dark:hover:border-violet-400 rounded-2xl p-8 text-center bg-zinc-50/50 dark:bg-zinc-900/30 transition-colors cursor-pointer group relative">
               <input
                 type="file"
                 accept=".csv, .json"
@@ -227,7 +227,7 @@ export const ImportExportModal: React.FC<ImportExportModalProps> = ({
                 disabled={isProcessing}
                 className="absolute inset-0 opacity-0 cursor-pointer w-full h-full"
               />
-              <div className="w-12 h-12 mx-auto mb-3 rounded-2xl bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 flex items-center justify-center group-hover:scale-110 transition-transform">
+              <div className="w-12 h-12 mx-auto mb-3 rounded-2xl bg-violet-50 dark:bg-violet-950/60 text-violet-600 dark:text-violet-400 flex items-center justify-center group-hover:scale-110 transition-transform">
                 <Upload className="w-6 h-6" />
               </div>
               <p className="font-semibold text-zinc-800 dark:text-zinc-200 text-sm sm:text-base">
@@ -239,20 +239,20 @@ export const ImportExportModal: React.FC<ImportExportModalProps> = ({
             </div>
 
             {/* Template samples guidance */}
-            <div className="p-4 rounded-2xl bg-indigo-50/50 dark:bg-indigo-950/30 border border-indigo-100 dark:border-indigo-900/50 text-xs text-indigo-950 dark:text-indigo-200">
+            <div className="p-4 rounded-2xl bg-violet-50/50 dark:bg-violet-950/30 border border-violet-100 dark:border-violet-900/50 text-xs text-violet-950 dark:text-violet-200">
               <div className="flex items-center justify-between font-bold mb-2">
                 <span className="flex items-center gap-1.5">
-                  <HelpCircle className="w-4 h-4 text-indigo-500" /> Standard Column Schema
+                  <HelpCircle className="w-4 h-4 text-violet-500" /> Standard Column Schema
                 </span>
                 <button
                   onClick={() => handleCopyTemplate('csv')}
-                  className="text-[11px] bg-white dark:bg-zinc-800 px-2 py-1 rounded-md border border-indigo-200 dark:border-indigo-800 font-semibold flex items-center gap-1 hover:bg-indigo-100 dark:hover:bg-zinc-700 transition-colors"
+                  className="text-[11px] bg-white dark:bg-zinc-800 px-2 py-1 rounded-md border border-violet-200 dark:border-violet-800 font-semibold flex items-center gap-1 hover:bg-violet-100 dark:hover:bg-zinc-700 transition-colors"
                 >
                   {copiedTemplate ? <Check className="w-3 h-3 text-emerald-500" /> : <Copy className="w-3 h-3" />}
                   Copy Sample CSV
                 </button>
               </div>
-              <p className="font-mono bg-white/80 dark:bg-zinc-900/80 p-2 rounded-lg border border-indigo-100 dark:border-indigo-900 text-[11px] overflow-x-auto">
+              <p className="font-mono bg-white/80 dark:bg-zinc-900/80 p-2 rounded-lg border border-violet-100 dark:border-violet-900 text-[11px] overflow-x-auto">
                 word,pronunciation,partofspeech,definition,sample sentence,synonym,antonym
               </p>
             </div>
@@ -271,7 +271,7 @@ export const ImportExportModal: React.FC<ImportExportModalProps> = ({
                   onClick={() => setFormat('csv')}
                   className={`px-3 py-1 rounded-lg text-xs font-semibold ${
                     format === 'csv'
-                      ? 'bg-indigo-600 text-white'
+                      ? 'bg-violet-600 text-white'
                       : 'bg-zinc-100 dark:bg-zinc-700 text-zinc-600 dark:text-zinc-300'
                   }`}
                 >
@@ -281,7 +281,7 @@ export const ImportExportModal: React.FC<ImportExportModalProps> = ({
                   onClick={() => setFormat('json')}
                   className={`px-3 py-1 rounded-lg text-xs font-semibold ${
                     format === 'json'
-                      ? 'bg-indigo-600 text-white'
+                      ? 'bg-violet-600 text-white'
                       : 'bg-zinc-100 dark:bg-zinc-700 text-zinc-600 dark:text-zinc-300'
                   }`}
                 >
@@ -299,13 +299,13 @@ export const ImportExportModal: React.FC<ImportExportModalProps> = ({
                   ? getSampleCSVTemplate()
                   : getSampleJSONTemplate()
               }
-              className="w-full p-4 rounded-2xl bg-zinc-50 dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 font-mono text-xs border border-zinc-200 dark:border-zinc-700 focus:outline-none focus:ring-2 focus:ring-indigo-500/50"
+              className="w-full p-4 rounded-2xl bg-zinc-50 dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 font-mono text-xs border border-zinc-200 dark:border-zinc-700 focus:outline-none focus:ring-2 focus:ring-violet-500/50"
             />
 
             <button
               onClick={handlePasteSubmit}
               disabled={isProcessing || !pastedText.trim()}
-              className="w-full py-3 bg-indigo-600 hover:bg-indigo-700 disabled:opacity-50 text-white font-semibold rounded-2xl text-sm transition-all flex items-center justify-center gap-2"
+              className="w-full py-3 bg-violet-600 hover:bg-violet-700 disabled:opacity-50 text-white font-semibold rounded-2xl text-sm transition-all flex items-center justify-center gap-2"
             >
               {isProcessing ? 'Processing Data...' : 'Import Dataset to Local Database'}
             </button>
@@ -315,7 +315,7 @@ export const ImportExportModal: React.FC<ImportExportModalProps> = ({
         {/* Tab 3: Export Words */}
         {activeTab === 'export' && (
           <div className="mt-6 space-y-6 text-center py-4">
-            <div className="w-16 h-16 mx-auto rounded-3xl bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 flex items-center justify-center">
+            <div className="w-16 h-16 mx-auto rounded-3xl bg-violet-50 dark:bg-violet-950/60 text-violet-600 dark:text-violet-400 flex items-center justify-center">
               <Database className="w-8 h-8" />
             </div>
             <div>
@@ -330,9 +330,9 @@ export const ImportExportModal: React.FC<ImportExportModalProps> = ({
             <div className="grid grid-cols-2 gap-4 max-w-md mx-auto">
               <button
                 onClick={() => handleExport('csv')}
-                className="p-4 rounded-2xl border border-zinc-200 dark:border-zinc-700 hover:border-indigo-500 dark:hover:border-indigo-400 bg-zinc-50 dark:bg-zinc-900/50 hover:bg-indigo-50/50 dark:hover:bg-indigo-950/30 transition-all flex flex-col items-center gap-2"
+                className="p-4 rounded-2xl border border-zinc-200 dark:border-zinc-700 hover:border-violet-500 dark:hover:border-violet-400 bg-zinc-50 dark:bg-zinc-900/50 hover:bg-violet-50/50 dark:hover:bg-violet-950/30 transition-all flex flex-col items-center gap-2"
               >
-                <FileText className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />
+                <FileText className="w-6 h-6 text-violet-600 dark:text-violet-400" />
                 <span className="font-bold text-sm text-zinc-800 dark:text-zinc-200">
                   Export CSV
                 </span>
@@ -341,7 +341,7 @@ export const ImportExportModal: React.FC<ImportExportModalProps> = ({
 
               <button
                 onClick={() => handleExport('json')}
-                className="p-4 rounded-2xl border border-zinc-200 dark:border-zinc-700 hover:border-indigo-500 dark:hover:border-indigo-400 bg-zinc-50 dark:bg-zinc-900/50 hover:bg-indigo-50/50 dark:hover:bg-indigo-950/30 transition-all flex flex-col items-center gap-2"
+                className="p-4 rounded-2xl border border-zinc-200 dark:border-zinc-700 hover:border-violet-500 dark:hover:border-violet-400 bg-zinc-50 dark:bg-zinc-900/50 hover:bg-violet-50/50 dark:hover:bg-violet-950/30 transition-all flex flex-col items-center gap-2"
               >
                 <FileCode className="w-6 h-6 text-purple-600 dark:text-purple-400" />
                 <span className="font-bold text-sm text-zinc-800 dark:text-zinc-200">
@@ -367,7 +367,7 @@ export const ImportExportModal: React.FC<ImportExportModalProps> = ({
 
             <div className="grid grid-cols-3 gap-2 text-center pt-2">
               <div className="p-2 rounded-xl bg-white dark:bg-zinc-800 border border-zinc-100 dark:border-zinc-700">
-                <div className="text-lg font-bold text-indigo-600 dark:text-indigo-400">{summary.total}</div>
+                <div className="text-lg font-bold text-violet-600 dark:text-violet-400">{summary.total}</div>
                 <div className="text-[10px] text-zinc-400 uppercase font-semibold">Parsed</div>
               </div>
               <div className="p-2 rounded-xl bg-white dark:bg-zinc-800 border border-zinc-100 dark:border-zinc-700">
