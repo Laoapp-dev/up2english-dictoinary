@@ -1,6 +1,6 @@
-# Lexicon - Modern Online & Offline PWA Dictionary Application
+# Up to English Dictionary - Modern Online & Offline PWA Dictionary Application
 
-Lexicon is a fast, clean, modern web-based dictionary application optimized for both live API fetching and offline usage using IndexedDB (`idb`) and full CSV/JSON dataset import/export.
+Up2English Dictionary is a fast, clean, modern web-based dictionary application optimized for both live API fetching and offline usage using IndexedDB (`idb`) and full CSV/JSON dataset import/export.
 
 Built with **React, Vite, TypeScript, Tailwind CSS, and IndexedDB**.
 
