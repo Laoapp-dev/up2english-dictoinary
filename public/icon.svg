@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <rect width="512" height="512" rx="112" fill="url(#grad)" />
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4f46e5" />
+      <stop offset="100%" stop-color="#312e81" />
+    </linearGradient>
+  </defs>
+  <!-- Book Symbol -->
+  <path d="M 128 140 C 180 120, 240 135, 256 150 C 272 135, 332 120, 384 140 L 384 360 C 332 340, 272 355, 256 370 C 240 355, 180 340, 128 360 Z" fill="#ffffff" />
+  <path d="M 256 150 L 256 370" stroke="#4f46e5" stroke-width="12" stroke-linecap="round" />
+</svg>
