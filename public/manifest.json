@@ -1,6 +1,6 @@
 {
   "background_color": "#ffffff",
-  "description": "Fast, lightweight online &amp; offline dictionary application with IndexedDB caching, speech pronunciation, and CSV/JSON dataset import.",
+  "description": "Fast, lightweight online &amp;amp; offline dictionary application with IndexedDB caching, speech pronunciation, and CSV/JSON dataset import.",
   "dir": "ltr",
   "display": "standalone",
   "name": "Up2Eng",
