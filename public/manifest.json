@@ -2,17 +2,25 @@
   "id": ".",
   "name": "Up2Eng Dictionary",
   "short_name": "Up2Eng",
-  "description": "Fast, lightweight online & offline dictionary application with IndexedDB caching, multi-source definitions (Merriam-Webster, Free Dictionary API), speech pronunciation, and CSV/JSON dataset import.",
+  "description": "Fast, lightweight online &amp; offline dictionary application with IndexedDB caching, multi-source definitions (Merriam-Webster, Free Dictionary API), speech pronunciation, and CSV/JSON dataset import.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
-  "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
+  "display_override": [
+    "window-controls-overlay",
+    "standalone",
+    "minimal-ui"
+  ],
   "orientation": "any",
   "dir": "ltr",
   "lang": "en",
   "background_color": "#ffffff",
   "theme_color": "#4f46e5",
-  "categories": ["education", "reference", "productivity"],
+  "categories": [
+    "education",
+    "reference",
+    "productivity"
+  ],
   "icons": [
     {
       "src": "./icon.svg",
@@ -63,14 +71,24 @@
       "short_name": "Random",
       "description": "Look up a random word from your dictionary",
       "url": "./?action=random",
-      "icons": [{ "src": "./icon-192.png", "sizes": "192x192" }]
+      "icons": [
+        {
+          "src": "./icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
     },
     {
       "name": "Saved Words",
       "short_name": "Saved",
       "description": "Open your bookmarked words",
       "url": "./?action=saved",
-      "icons": [{ "src": "./icon-192.png", "sizes": "192x192" }]
+      "icons": [
+        {
+          "src": "./icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
     }
   ]
 }
